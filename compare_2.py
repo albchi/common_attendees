@@ -62,8 +62,10 @@ for tmp_show in lshow:
       l_show_booth.append(tmp_show)
 
 print(" Brute force : these people " + str(len(l_show_booth)) + " went to the show and booth")
-for tmp in l_show_booth:
-   print(tmp)
+with open("show_booth.txt", "w") as f:
+   for tmp in l_show_booth:
+      print(tmp)
+      f.write(tmp + ", ")
 
 #break # CANNOT BREAK out of main
 # exit() # works!
